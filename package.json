@@ -1,0 +1,29 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "仿马蜂窝移动端",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "vue": "^2.4.2",
+    "zepto": "^1.2.0",
+    "zepto-touch": "^0.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dongmo123/m.mfwapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dongmo123/m.mfwapp/issues"
+  },
+  "homepage": "https://github.com/dongmo123/m.mfwapp#readme"
+}
