@@ -14,6 +14,7 @@
     "gulp-sass": "^3.1.0"
   },
   "dependencies": {
+    "jquery": "^3.2.1",
     "vue": "^2.4.2",
     "zepto": "^1.2.0",
     "zepto-touch": "^0.0.4"
