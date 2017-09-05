@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/swiper-3.4.2.min.css">
 </head>
 <body>
     <header id="header" class="header">
@@ -28,11 +29,17 @@
     </header><!-- /header -->
     <section class="focus">
         <div class="pics">
-            <div><a href=""><img src="assets/images/uploads/section1.jpeg" alt=""></a></div>
-        </div>
-        <div class="scrollbar">
-            <div class="barbg"></div>
-            <div class="barcur"></div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href=""><img src="assets/images/uploads/section1.jpeg" alt=""></a></div>
+                    <div class="swiper-slide"><a href=""><img src="assets/images/uploads/section2.jpeg" alt=""></a></div>
+                    <div class="swiper-slide"><a href=""><img src="assets/images/uploads/section3.jpeg" alt=""></a></div>
+                </div>
+            </div>
+            <div class="scrollbar">
+                <div class="barbg"></div>
+                <div class="barcur"></div>
+            </div>
         </div>
     </section>
     <section class="nav-li">
@@ -116,5 +123,25 @@
         </ul>
         <p>© 2017 Mafengwo.cn 京ICP备11015476号 </p>
     </footer>
+    <script src="node_modules/zepto/dist/zepto.min.js"></script>
+    <script src="assets/js/swiper-3.4.2.jquery.min.js"></script>
+    <script src="assets/js/fx.js"></script>
+    <script>
+    $(document).ready(function () {
+      var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay:2000,
+        autoplayDisableOnInteraction : false,
+        onSlideChangeStart: function(swiper){
+            //Swiper初始化了
+            //console.log(swiper.realIndex);//提示Swiper的当前索引
+            $('.barcur').animate({
+                left: $('.barcur').width()*swiper.realIndex
+            },200);
+        }
+      })
+    })
+    </script>
 </body>
 </html>
